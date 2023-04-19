@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <!-- npm install @fortawesome/fontawesome-free -->
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+
+    <style>
+        /* Darkmode Btn */
+        
+        input:checked~.dot {
+            transform: translateX(100%);
+            background-color: #ef4444;
+        }
+    </style>
+
+    </link>
+
+    <nav>
+        <!-- Start Navbar -->
+        <nav class="bg-slate-200">
+            <div class="container flex justify-between items-center py-2 mx-auto">
+                <!-- Logo -->
+                <span class="text-red-500 text-3xl font-semibold">Vanilla</span>
+
+                <!-- Menu Items -->
+                <ul class="flex space-x-5">
+                    <li>Home</li>
+                    <li>Why?</li>
+                    <li>Features</li>
+                    <li>Clients</li>
+                </ul>
+
+                <!-- Dark Mode -->
+                <label for="toggleB" class="flex items-center cursor-pointer">
+                <!-- toggle -->
+                    <div class="relative">
+                    <!-- input -->
+                    <input type="checkbox" id="toggleB" class="sr-only">
+                    <!-- line -->
+                    <div class="block bg-gray-500 w-12 h-7 rounded-full"></div>
+                    <!-- dot -->
+                    <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition"></div>
+                    </div>
+                </label>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </nav>
+
+    </nav>
