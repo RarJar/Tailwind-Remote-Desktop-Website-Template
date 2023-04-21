@@ -28,7 +28,7 @@
 
             input:checked~.dot {
                 transform: translateX(100%);
-                background-color: #24232d;
+                background-color: #1e293b;
             }
         </style>
 
@@ -36,8 +36,8 @@
 
     <body>
         <!-- Start Navbar -->
-        <nav class="bg-slate-100">
-            <div class="container flex justify-between items-center py-2 mx-auto">
+        <nav class="bg-slate-100 dark:bg-slate-700">
+            <div class="container flex justify-between items-center py-3 mx-auto">
                 <!-- Logo -->
                 <div class="flex">
                     <img src="../icon.png"></img>
@@ -45,7 +45,7 @@
                 </div>
 
                 <!-- Menu Items -->
-                <ul class="flex space-x-5 cursor-pointer">
+                <ul class="flex space-x-5 cursor-pointer dark:text-slate-50">
                     <li>Home</li>
                     <li>Why?</li>
                     <li>Features</li>
@@ -69,19 +69,18 @@
         <!-- End Navbar -->
 
         <!-- Start Home -->
-        <section class="py-40">
+        <section class="py-40 dark:bg-slate-800">
             <div class="container mx-auto text-center space-y-5">
 
-                <span class="text-6xl md:text-9xl font-semibold text-slate-700">Access.<span
-                        class="text-red-500">Now.</span> </span>
+                <span class="text-6xl md:text-9xl font-semibold text-slate-700 dark:text-slate-50">Access.<span class="text-red-500">Now.</span> </span>
 
-                <p class="text-slate-600 max-w-sm md:max-w-lg mx-auto">Access only device at any time from
+                <p class="text-slate-600 dark:text-slate-50 max-w-sm md:max-w-lg mx-auto">Access only device at any time from
                     anywhere.Always secure and fast</p>
 
                 <div
                     class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
                     <button
-                        class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
+                        class="px-5 py-3 bg-red-500 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
                         <i class="fa-solid fa-download fa-beat me-2"></i>
                         Download Now
                     </button>
@@ -97,22 +96,22 @@
         <!-- End Home -->
 
         <!-- Start Why -->
-        <section class="bg-slate-100 py-40">
+        <section class="bg-slate-100 dark:bg-slate-800 py-40">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                 <!-- Left -->
                 <div class="flex flex-col justify-center items-center md:justify-start md:items-start">
                     <span class="text-lg text-red-500 font-semibold">Version 7.1 Out Now</span>
 
                     <span
-                        class="text-6xl md:text-7xl font-semibold max-w-sm mb-4 text-center md:text-start text-slate-700">Overcoming
+                        class="text-6xl md:text-7xl font-semibold max-w-sm mb-4 text-center md:text-start text-slate-700 dark:text-slate-50">Overcoming
                         distance</span>
 
-                    <p class="text-slate-600 max-w-sm md:max-w-xl mb-5 text-center md:text-start">Discover professional
+                    <p class="text-slate-600 dark:text-slate-50 max-w-sm md:max-w-xl mb-5 text-center md:text-start">Discover professional
                         user management with my.anydesk II, scalable on- and offboarding options, and a multitude of
                         security layers.</p>
 
                     <button
-                        class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
+                        class="px-5 py-3 bg-red-500 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
                         <i class="fa-solid fa-eye me-2"></i>
                         Learn More
                     </button>
@@ -127,7 +126,7 @@
         <!-- End Why -->
 
         <!-- Start Features -->
-        <section class="py-40">
+        <section class="py-40 dark:bg-slate-800">
             <div class="container grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 mx-auto">
                 <!--Start Left -->
                 <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
@@ -136,7 +135,7 @@
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-rocket fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Blazing fast</span>
-                            <p class="text-slate-600 my-7">Minimum latency via our own DeskRT codec, Frame rates of 60
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Minimum latency via our own DeskRT codec, Frame rates of 60
                                 fps.</p>
                             <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                         </div>
@@ -147,7 +146,7 @@
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-weight-scale fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Lightweight</span>
-                            <p class="text-slate-600 my-7">Download 3 MB. Start App. Done.
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Download 3 MB. Start App. Done.
                             </p>
                             <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                         </div>
@@ -158,7 +157,7 @@
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-key fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Secure</span>
-                            <p class="text-slate-600 my-7">Military-grade TLS 1.2 security, 256-bit AES Transport
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Military-grade TLS 1.2 security, 256-bit AES Transport
                                 Encryption</p>
                             <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                         </div>
@@ -169,7 +168,7 @@
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-computer fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Everywhere</span>
-                            <p class="text-slate-600 my-7">Works on Windows, macOS, iOS, Android, Linux, Raspberry Pi
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Works on Windows, macOS, iOS, Android, Linux, Raspberry Pi
                             </p>
                             <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                         </div>
@@ -180,11 +179,11 @@
                 <!-- Start Right -->
                 <div class="flex justify-center items-center">
                     <div class="max-w-xs space-y-7 text-center">
-                        <span class="text-5xl font-semibold text-red-500 leading-tight">Why 500+ million users love
+                        <span class="text-5xl font-semibold text-red-500 dark:text-slate-50 leading-tight">Why 500+ million users love
                             RemoDesk</span>
 
                         <button
-                            class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg mx-auto">
+                            class="px-5 py-3 bg-red-500 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg mx-auto">
                             <i class="fa-solid fa-eye me-2"></i>
                             Discover Case Studies
                         </button>
@@ -196,35 +195,34 @@
         <!-- End Features -->
 
         <!-- Start Clients -->
-        <section class="py-32">
+        <section class="py-32 dark:bg-slate-800">
             <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 mx-auto">
                 <div class="flex flex-col text-center space-y-2">
                     <span class="text-5xl font-semibold text-red-500">500+ Million</span>
-                    <span class="font-semibold">Downloads</span>
+                    <span class="font-semibold text-slate-600 dark:text-slate-50">Downloads</span>
                 </div>
                 <div class="flex flex-col text-center space-y-2">
                     <span class="text-5xl font-semibold text-red-500">400+ Million</span>
-                    <span class="font-semibold">Sessions per month</span>
+                    <span class="font-semibold text-slate-600 dark:text-slate-50">Sessions per month</span>
                 </div>
                 <div class="flex flex-col text-center space-y-2">
                     <span class="text-5xl font-semibold text-red-500">300+ Million</span>
-                    <span class="font-semibold">Bridged meiles per month</span>
+                    <span class="font-semibold text-slate-600 dark:text-slate-50">Bridged meiles per month</span>
                 </div>
             </div>
         </section>
         <!-- End Clients -->
 
         <!-- Start Solution -->
-        <section class="py-40">
-            <div class="container mx-auto text-center text-slate-700 text-4xl mb-6">RemoDesk fits your needs</div>
+        <section class="py-40 dark:bg-slate-800">
+            <div class="container mx-auto text-center text-slate-700 text-4xl mb-6 dark:text-slate-50">RemoDesk fits your needs</div>
 
             <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto">
                 <div
                     class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
                     <i class="fa-solid fa-house text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Runs in Cloud or On-Premises</span>
-                    <span>Choose our cloud solution to benefit from our infrastructure and service or install on your
-                        own servers and work completely independently.</span>
+                    <span class="text-slate-600 dark:text-slate-50">Choose our cloud solution to benefit from our infrastructure and service or install on your own servers and work completely independently.</span>
                     <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                 </div>
 
@@ -232,7 +230,7 @@
                     class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
                     <i class="fa-solid fa-handshake-angle text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Full mobile support</span>
-                    <span>Access and control desktops, servers, machines, and devices via smartphone or tablet.
+                    <span class="text-slate-600 dark:text-slate-50">Access and control desktops, servers, machines, and devices via smartphone or tablet.
                         Cross-compatible and platform independent.</span>
                     <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                 </div>
@@ -241,7 +239,7 @@
                     class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
                     <i class="fa-solid fa-pen-nib text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Flexibility & customization</span>
-                    <span>Create your own version of AnyDesk and fit it to your individual needs. Allow a consistent
+                    <span class="text-slate-600 dark:text-slate-50">Create your own version of AnyDesk and fit it to your individual needs. Allow a consistent
                         brand experience for your users.</span>
                     <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                 </div>
@@ -250,50 +248,50 @@
         <!-- End Solution -->
 
         <!-- Start Download -->
-        <section class="py-32">
-            <div class="mb-14 container mx-auto text-center space-y-3">
-                <span class="text-slate-700 text-4xl">Every operating system, every device</span>
+        <section class="py-32 dark:bg-slate-800">
+            <div class="mb-14 container mx-auto text-center space-y-3 text-slate-700 dark:text-slate-50">
+                <span class="text-4xl">Every operating system, every device</span>
                 <p>RemoDesk runs native clients on all major platforms</p>
             </div>
 
             <div class="container grid grid-cols-2 md:grid-cols-6 gap-10 mx-auto">
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-windows text-4xl md:text-5xl"></i>
-                    <span>Window OS</span>
+                    <i class="fa-brands fa-windows text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Window OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-apple text-4xl md:text-5xl"></i>
-                    <span>Mac OS</span>
+                    <i class="fa-brands fa-apple text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Mac OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-android text-4xl md:text-5xl"></i>
-                    <span>Android OS</span>
+                    <i class="fa-brands fa-android text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Android OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-linux text-4xl md:text-5xl"></i>
-                    <span>Linux OS</span>
+                    <i class="fa-brands fa-linux text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Linux OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-chrome text-4xl md:text-5xl"></i>
-                    <span>Chrome OS</span>
+                    <i class="fa-brands fa-chrome text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Chrome OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-raspberry-pi text-4xl md:text-5xl"></i>
-                    <span>Raspberry-pi OS</span>
+                    <i class="fa-brands fa-raspberry-pi text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Raspberry-pi OS</span>
                 </div>
             </div>
         </section>
         <!-- End Download -->
 
         <!-- Start Footer -->
-        <section class="py-6 bg-slate-100">        
+        <section class="py-6 bg-slate-100 dark:bg-slate-900">        
             <div class="container flex flex-col md:flex-row space-y-2 md:space-y-0 justify-between items-center mx-auto">
                 <div class="flex items-center">
                     <img src="../icon.png"></img>
                     <span class="text-red-500 text-xl font-semibold ms-1">RemoDesk</span>
                 </div>
                 
-                <ul class="flex space-x-5 text-slate-700 text-sm md:text-md cursor-pointer">
+                <ul class="flex space-x-5 text-slate-600 dark:text-slate-50 text-sm md:text-md cursor-pointer">
                     <li class="hover:underline hover:underline-offset-8">Privacy and Policy</li>
                     <li class="hover:underline hover:underline-offset-8">Contact</li>
                     <li class="hover:underline hover:underline-offset-8">Terms</li>
@@ -304,5 +302,34 @@
         <!-- End Footer -->
 
     </body>
+
+    <script>
+        const switchBtn = document.getElementById('toggleB')
+
+        const darkTheme = () => {
+            document.documentElement.classList.add('dark')
+            localStorage.setItem('theme', 'dark')
+        }
+
+        const lightTheme = () => {
+            document.documentElement.classList.remove('dark')
+            localStorage.removeItem('theme')
+        }
+
+        // When Switch Changes
+        switchBtn.addEventListener('change', function () {
+            if (this.checked) {
+                darkTheme();
+            } else {
+                lightTheme();
+            }
+        });
+
+        // Start Method
+        if (localStorage.getItem('theme') == 'dark') {
+            darkTheme();
+            switchBtn.setAttribute('checked', true);
+        }
+    </script>
 
 </html>
