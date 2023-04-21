@@ -17,6 +17,9 @@
         <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
 
         <style>
+            body::-webkit-scrollbar {
+                display: none;
+            }
             /* Font */
 
             @font-face {
@@ -36,7 +39,7 @@
 
     <body>
         <!-- Start Navbar -->
-        <nav class="bg-slate-100 dark:bg-slate-700">
+        <nav class="bg-slate-100 dark:bg-slate-700 px-6 md:px-0">
             <div class="container flex justify-between items-center py-3 mx-auto">
                 <!-- Logo -->
                 <div class="flex">
@@ -45,25 +48,40 @@
                 </div>
 
                 <!-- Menu Items -->
-                <ul class="flex space-x-5 cursor-pointer dark:text-slate-50">
-                    <li>Home</li>
-                    <li>Why?</li>
-                    <li>Features</li>
-                    <li>Clients</li>
-                </ul>
+                <div class="fixed md:static w-full md:w-auto h-screen md:h-auto bg-slate-100 dark:bg-slate-800 dark:md:bg-slate-700 z-10 flex justify-center items-center bottom-0 -left-full md:left-auto duration-300 md:duration-0" id="mobile-menu">
 
-                <!-- Dark Mode -->
-                <label for="toggleB" class="flex items-center cursor-pointer">
-                    <!-- toggle -->
-                    <div class="relative">
-                        <!-- input -->
-                        <input type="checkbox" id="toggleB" class="sr-only">
-                        <!-- line -->
-                        <div class="block bg-gray-500 w-12 h-7 rounded-full"></div>
-                        <!-- dot -->
-                        <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition"></div>
+                    <div class="absolute top-3 right-3 md:hidden">
+                        <i class="fa fa-xmark text-slate-700 dark:text-slate-50 text-2xl" id="close-menu"></i>
                     </div>
-                </label>
+
+                    <ul class="flex flex-col text-xl md:text-lg md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0 cursor-pointer text-slate-700 dark:text-slate-50">
+                        <li>Home</li>
+                        <li>Why?</li>
+                        <li>Features</li>
+                        <li>Clients</li>
+                    </ul>
+
+                </div>
+
+                <div class="flex items-center">
+                    <!-- Dark Mode -->
+                    <label for="toggleB" class="flex items-center cursor-pointer">
+                        <!-- toggle -->
+                        <div class="relative">
+                            <!-- input -->
+                            <input type="checkbox" id="toggleB" class="sr-only">
+                            <!-- line -->
+                            <div class="block bg-gray-500 w-12 h-7 rounded-full"></div>
+                            <!-- dot -->
+                            <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition"></div>
+                        </div>
+                    </label>
+                    
+                    <!-- Menu -->
+                    <div class="md:hidden flex items-center" id="open-menu">
+                        <i class="fa-solid fa-bars ms-4 text-slate-700 dark:text-slate-50 text-2xl"></i>
+                    </div>
+                </div>
             </div>
         </nav>
         <!-- End Navbar -->
@@ -304,6 +322,7 @@
     </body>
 
     <script>
+        // Start DarkMode
         const switchBtn = document.getElementById('toggleB')
 
         const darkTheme = () => {
@@ -330,6 +349,24 @@
             darkTheme();
             switchBtn.setAttribute('checked', true);
         }
+        // End DarkMode
+
+        // Start Menu
+        const openMenu = document.getElementById('open-menu')
+        const closeMenu = document.getElementById('close-menu')
+        const mobileMenu = document.getElementById('mobile-menu')
+
+        // When Close Menu
+        openMenu.addEventListener('click', function () {
+            mobileMenu.style.left = "0px"
+        });
+
+        // When Close Menu
+        closeMenu.addEventListener('click', function () {
+            mobileMenu.style.left = "-100%"
+        });
+
+        // End Menu
     </script>
 
 </html>
