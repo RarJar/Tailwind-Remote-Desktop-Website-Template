@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RemoDesk</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RemoDesk</title>
 
-    <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
-    <link href="/dist/output.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
 
-    <!-- npm install @fortawesome/fontawesome-free -->
-    <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+        <!-- Tailwind -->
+        <link href="/dist/output.css" rel="stylesheet">
 
-    <style>
-        /* Font */
-        
-        @font-face {
-            font-family: "main-font";
-            src: url('/assets/fonts/Poppins-Regular.ttf');
-        }
-        /* Darkmode Btn */
-        
-        input:checked~.dot {
-            transform: translateX(100%);
-            background-color: #24232d;
-        }
-    </style>
+        <!-- npm install @fortawesome/fontawesome-free -->
+        <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
 
-    </link>
+        <style>
+            /* Font */
 
-    <nav>
+            @font-face {
+                font-family: "main-font";
+                src: url('/assets/fonts/Poppins-Regular.ttf');
+            }
+
+            /* Darkmode Btn */
+
+            input:checked~.dot {
+                transform: translateX(100%);
+                background-color: #24232d;
+            }
+        </style>
+
+    </head>
+
+    <body>
         <!-- Start Navbar -->
         <nav class="bg-slate-100">
             <div class="container flex justify-between items-center py-2 mx-auto">
                 <!-- Logo -->
-                <span class="text-red-500 text-3xl font-semibold">RemoDesk</span>
+                <div class="flex">
+                    <img src="../icon.png"></img>
+                    <span class="text-red-500 text-2xl md:text-3xl font-semibold ms-1">RemoDesk</span>
+                </div>
 
                 <!-- Menu Items -->
                 <ul class="flex space-x-5 cursor-pointer">
@@ -48,14 +54,14 @@
 
                 <!-- Dark Mode -->
                 <label for="toggleB" class="flex items-center cursor-pointer">
-                <!-- toggle -->
+                    <!-- toggle -->
                     <div class="relative">
-                    <!-- input -->
-                    <input type="checkbox" id="toggleB" class="sr-only">
-                    <!-- line -->
-                    <div class="block bg-gray-500 w-12 h-7 rounded-full"></div>
-                    <!-- dot -->
-                    <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition"></div>
+                        <!-- input -->
+                        <input type="checkbox" id="toggleB" class="sr-only">
+                        <!-- line -->
+                        <div class="block bg-gray-500 w-12 h-7 rounded-full"></div>
+                        <!-- dot -->
+                        <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition"></div>
                     </div>
                 </label>
             </div>
@@ -66,17 +72,22 @@
         <section class="py-40">
             <div class="container mx-auto text-center space-y-5">
 
-                <span class="text-6xl md:text-9xl font-semibold text-slate-700">Access.<span class="text-red-500">Now.</span> </span>
+                <span class="text-6xl md:text-9xl font-semibold text-slate-700">Access.<span
+                        class="text-red-500">Now.</span> </span>
 
-                <p class="text-slate-600 max-w-sm md:max-w-lg mx-auto">Access only device at any time from anywhere.Always secure and fast</p>
+                <p class="text-slate-600 max-w-sm md:max-w-lg mx-auto">Access only device at any time from
+                    anywhere.Always secure and fast</p>
 
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-                    <button class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
+                <div
+                    class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+                    <button
+                        class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
                         <i class="fa-solid fa-download fa-beat me-2"></i>
                         Download Now
                     </button>
 
-                    <button class="px-5 py-3 bg-slate-200 rounded-full text-red-400 flex items-center outline outline-2 outline-red-300 text-lg">
+                    <button
+                        class="px-5 py-3 bg-slate-200 rounded-full text-red-400 flex items-center outline outline-2 outline-red-300 text-lg">
                         <i class="fa-solid fa-cart-shopping fa-beat me-2"></i>
                         Order Now
                     </button>
@@ -92,11 +103,16 @@
                 <div class="flex flex-col justify-center items-center md:justify-start md:items-start">
                     <span class="text-lg text-red-500 font-semibold">Version 7.1 Out Now</span>
 
-                    <span class="text-6xl md:text-7xl font-semibold max-w-sm mb-4 text-center md:text-start text-slate-700">Overcoming distance</span>
+                    <span
+                        class="text-6xl md:text-7xl font-semibold max-w-sm mb-4 text-center md:text-start text-slate-700">Overcoming
+                        distance</span>
 
-                    <p class="text-slate-600 max-w-sm md:max-w-xl mb-5 text-center md:text-start">Discover professional user management with my.anydesk II, scalable on- and offboarding options, and a multitude of security layers.</p>
+                    <p class="text-slate-600 max-w-sm md:max-w-xl mb-5 text-center md:text-start">Discover professional
+                        user management with my.anydesk II, scalable on- and offboarding options, and a multitude of
+                        security layers.</p>
 
-                    <button class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
+                    <button
+                        class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
                         <i class="fa-solid fa-eye me-2"></i>
                         Learn More
                     </button>
@@ -120,7 +136,8 @@
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-rocket fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Blazing fast</span>
-                            <p class="text-slate-600 my-7">Minimum latency via our own DeskRT codec, Frame rates of 60 fps.</p>
+                            <p class="text-slate-600 my-7">Minimum latency via our own DeskRT codec, Frame rates of 60
+                                fps.</p>
                             <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                         </div>
                     </div>
@@ -141,7 +158,8 @@
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-key fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Secure</span>
-                            <p class="text-slate-600 my-7">Military-grade TLS 1.2 security, 256-bit AES Transport Encryption</p>
+                            <p class="text-slate-600 my-7">Military-grade TLS 1.2 security, 256-bit AES Transport
+                                Encryption</p>
                             <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                         </div>
                     </div>
@@ -151,7 +169,8 @@
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-computer fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Everywhere</span>
-                            <p class="text-slate-600 my-7">Works on Windows, macOS, iOS, Android, Linux, Raspberry Pi</p>
+                            <p class="text-slate-600 my-7">Works on Windows, macOS, iOS, Android, Linux, Raspberry Pi
+                            </p>
                             <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                         </div>
                     </div>
@@ -161,9 +180,11 @@
                 <!-- Start Right -->
                 <div class="flex justify-center items-center">
                     <div class="max-w-xs space-y-7 text-center">
-                        <span class="text-5xl font-semibold text-red-500 leading-tight">Why 500+ million users love RemoDesk</span>
+                        <span class="text-5xl font-semibold text-red-500 leading-tight">Why 500+ million users love
+                            RemoDesk</span>
 
-                        <button class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg mx-auto">
+                        <button
+                            class="px-5 py-3 bg-red-400 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg mx-auto">
                             <i class="fa-solid fa-eye me-2"></i>
                             Discover Case Studies
                         </button>
@@ -198,24 +219,30 @@
             <div class="container mx-auto text-center text-slate-700 text-4xl mb-6">RemoDesk fits your needs</div>
 
             <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto">
-                <div class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
+                <div
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
                     <i class="fa-solid fa-house text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Runs in Cloud or On-Premises</span>
-                    <span>Choose our cloud solution to benefit from our infrastructure and service or install on your own servers and work completely independently.</span>
+                    <span>Choose our cloud solution to benefit from our infrastructure and service or install on your
+                        own servers and work completely independently.</span>
                     <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                 </div>
 
-                <div class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
+                <div
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
                     <i class="fa-solid fa-handshake-angle text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Full mobile support</span>
-                    <span>Access and control desktops, servers, machines, and devices via smartphone or tablet. Cross-compatible and platform independent.</span>
+                    <span>Access and control desktops, servers, machines, and devices via smartphone or tablet.
+                        Cross-compatible and platform independent.</span>
                     <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                 </div>
 
-                <div class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
+                <div
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
                     <i class="fa-solid fa-pen-nib text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Flexibility & customization</span>
-                    <span>Create your own version of AnyDesk and fit it to your individual needs. Allow a consistent brand experience for your users.</span>
+                    <span>Create your own version of AnyDesk and fit it to your individual needs. Allow a consistent
+                        brand experience for your users.</span>
                     <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
                 </div>
             </div>
@@ -257,6 +284,25 @@
             </div>
         </section>
         <!-- End Download -->
-    </nav>
 
-    </nav>
+        <!-- Start Footer -->
+        <section class="py-6 bg-slate-100">        
+            <div class="container flex flex-col md:flex-row space-y-2 md:space-y-0 justify-between items-center mx-auto">
+                <div class="flex items-center">
+                    <img src="../icon.png"></img>
+                    <span class="text-red-500 text-xl font-semibold ms-1">RemoDesk</span>
+                </div>
+                
+                <ul class="flex space-x-5 text-slate-700 text-sm md:text-md cursor-pointer">
+                    <li class="hover:underline hover:underline-offset-8">Privacy and Policy</li>
+                    <li class="hover:underline hover:underline-offset-8">Contact</li>
+                    <li class="hover:underline hover:underline-offset-8">Terms</li>
+                    <li class="hover:underline hover:underline-offset-8">why Love?</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Footer -->
+
+    </body>
+
+</html>
