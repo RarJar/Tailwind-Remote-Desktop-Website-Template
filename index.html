@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RemoDesk</title>
+
+        <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+
+        <!-- Tailwind -->
+        <link href="./build.css" rel="stylesheet">
+
+        <!-- npm install @fortawesome/fontawesome-free -->
+        <link href="./node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+
+        <!-- npm install animate.css --save -->
+        <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+
+        <!-- npm install --save aos@next -->
+        <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+                text-decoration: none;
+                list-style: none;
+            }
+
+            body::-webkit-scrollbar {
+                display: none;
+            }
+            /* Font */
+
+            @font-face {
+                font-family: "main-font";
+                src: url('./assets/fonts/Poppins-Regular.ttf');
+            }
+
+            /* Darkmode Btn */
+
+            input:checked~.dot {
+                transform: translateX(100%);
+                background-color: #1e293b;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Start Navbar -->
+        <nav class="bg-slate-100 shadow-md dark:bg-slate-700 px-6 md:px-0 z-10 animate__animated" id="navbar">
+            <div class="container flex justify-between items-center py-3 mx-auto">
+                <!-- Logo -->
+                <div class="flex">
+                    <img src="./icon.png"></img>
+                    <span class="text-red-500 text-2xl md:text-3xl font-semibold ms-1">RemoDesk</span>
+                </div>
+
+                <!-- Menu Items -->
+                <div class="fixed top-0 md:static w-full md:w-auto h-screen md:h-auto bg-slate-100 dark:bg-slate-800 dark:md:bg-slate-700 z-10 flex justify-center items-center bottom-0 -left-full md:left-auto duration-300 md:duration-0" id="mobile-menu">
+
+                    <div class="absolute top-3 right-3 md:hidden">
+                        <i class="fa fa-xmark text-slate-700 dark:text-slate-50 text-2xl" id="close-menu"></i>
+                    </div>
+
+                    <ul class="flex flex-col text-xl md:text-lg md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0 cursor-pointer text-slate-700 dark:text-slate-50" id="goto-section">
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#why">Why?</a>
+                        </li>
+                        <li>
+                            <a href="#features">Features</a>
+                        </li>
+                        <li>
+                            <a href="#clients">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#download">Download</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="flex items-center">
+                    <!-- Dark Mode -->
+                    <label for="toggleB" class="flex items-center cursor-pointer">
+                        <!-- toggle -->
+                        <div class="relative">
+                            <!-- input -->
+                            <input type="checkbox" id="toggleB" class="sr-only">
+                            <!-- line -->
+                            <div class="block bg-gray-500 w-12 h-7 rounded-full"></div>
+                            <!-- dot -->
+                            <div class="dot absolute left-1 top-1 bg-white w-5 h-5 rounded-full transition"></div>
+                        </div>
+                    </label>
+                    
+                    <!-- Menu -->
+                    <div class="md:hidden flex items-center" id="open-menu">
+                        <i class="fa-solid fa-bars ms-4 text-slate-700 dark:text-slate-50 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <!-- Start Home -->
+        <section class="py-40 dark:bg-slate-800" id="home">
+            <div class="container mx-auto text-center space-y-5">
+
+                <span class="text-6xl md:text-9xl font-semibold text-slate-700 dark:text-slate-50">Access.<span class="text-red-500">Now.</span> </span>
+
+                <p class="text-slate-600 dark:text-slate-50 max-w-sm md:max-w-lg mx-auto">Access only device at any time from
+                    anywhere.Always secure and fast</p>
+
+                <div
+                    class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+                    <button
+                        class="px-5 py-3 bg-red-500 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
+                        <i class="fa-solid fa-download fa-beat me-2"></i>
+                        Download Now
+                    </button>
+
+                    <button
+                        class="px-5 py-3 bg-slate-200 rounded-full text-red-400 flex items-center outline outline-2 outline-red-300 text-lg">
+                        <i class="fa-solid fa-cart-shopping fa-beat me-2"></i>
+                        Order Now
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- End Home -->
+
+        <!-- Start Why -->
+        <section class="bg-slate-100 dark:bg-slate-800 py-40" id="why">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Left -->
+                <div class="flex flex-col justify-center items-center md:justify-start md:items-start" data-aos="fade-right">
+                    <span class="text-lg text-red-500 font-semibold">Version 7.1 Out Now</span>
+
+                    <span
+                        class="text-6xl md:text-7xl font-semibold max-w-sm mb-4 text-center md:text-start text-slate-700 dark:text-slate-50">Overcoming
+                        distance</span>
+
+                    <p class="text-slate-600 dark:text-slate-50 max-w-sm md:max-w-xl mb-5 text-center md:text-start">Discover professional
+                        user management with my.anydesk II, scalable on- and offboarding options, and a multitude of
+                        security layers.</p>
+
+                    <button
+                        class="px-5 py-3 bg-red-500 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg">
+                        <i class="fa-solid fa-eye me-2"></i>
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Right -->
+                <div class="flex justify-center md:justify-start lg:justify-end items-center" data-aos="fade-left">
+                    <img src="./assets/images/why.jpg" class="rounded-md max-w-xs md:max-w-md">
+                </div>
+            </div>
+        </section>
+        <!-- End Why -->
+
+        <!-- Start Features -->
+        <section class="py-40 dark:bg-slate-800" id="features">
+            <div class="container grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 mx-auto">
+                <!--Start Left -->
+                <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+                    <!-- card one -->
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
+                        <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
+                            <i class="fa-solid fa-rocket fa-beat text-4xl text-red-400"></i>
+                            <span class="text-3xl text-red-500">Blazing fast</span>
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Minimum latency via our own DeskRT codec, Frame rates of 60
+                                fps.</p>
+                            <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
+                        </div>
+                    </div>
+
+                    <!-- card two -->
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
+                        <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
+                            <i class="fa-solid fa-weight-scale fa-beat text-4xl text-red-400"></i>
+                            <span class="text-3xl text-red-500">Lightweight</span>
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Download 3 MB. Start App. Done.
+                            </p>
+                            <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
+                        </div>
+                    </div>
+
+                    <!-- three one -->
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
+                        <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
+                            <i class="fa-solid fa-key fa-beat text-4xl text-red-400"></i>
+                            <span class="text-3xl text-red-500">Secure</span>
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Military-grade TLS 1.2 security, 256-bit AES Transport
+                                Encryption</p>
+                            <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
+                        </div>
+                    </div>
+
+                    <!-- four one -->
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
+                        <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
+                            <i class="fa-solid fa-computer fa-beat text-4xl text-red-400"></i>
+                            <span class="text-3xl text-red-500">Everywhere</span>
+                            <p class="text-slate-600 my-7 dark:text-slate-50">Works on Windows, macOS, iOS, Android, Linux, Raspberry Pi
+                            </p>
+                            <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+                <!--End Left -->
+
+                <!-- Start Right -->
+                <div class="flex justify-center items-center">
+                    <div class="max-w-xs space-y-7 text-center">
+                        <span class="text-5xl font-semibold text-red-500 dark:text-slate-50 leading-tight">Why 500+ million users love
+                            RemoDesk</span>
+
+                        <button
+                            class="px-5 py-3 bg-red-500 rounded-full text-slate-100 flex items-center outline outline-2 outline-red-300 text-lg mx-auto">
+                            <i class="fa-solid fa-eye me-2"></i>
+                            Discover Case Studies
+                        </button>
+                    </div>
+                </div>
+                <!-- End Right -->
+            </div>
+        </section>
+        <!-- End Features -->
+
+        <!-- Start Clients -->
+        <section class="py-32 dark:bg-slate-800" id="clients">
+            <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 mx-auto" data-aos="fade-up">
+                <div class="flex flex-col text-center space-y-2">
+                    <span class="text-5xl font-semibold text-red-500">500+ Million</span>
+                    <span class="font-semibold text-slate-600 dark:text-slate-50">Downloads</span>
+                </div>
+                <div class="flex flex-col text-center space-y-2">
+                    <span class="text-5xl font-semibold text-red-500">400+ Million</span>
+                    <span class="font-semibold text-slate-600 dark:text-slate-50">Sessions per month</span>
+                </div>
+                <div class="flex flex-col text-center space-y-2">
+                    <span class="text-5xl font-semibold text-red-500">300+ Million</span>
+                    <span class="font-semibold text-slate-600 dark:text-slate-50">Bridged meiles per month</span>
+                </div>
+            </div>
+        </section>
+        <!-- End Clients -->
+
+        <!-- Start Solution -->
+        <section class="py-40 dark:bg-slate-800">
+            <div class="container mx-auto text-center text-slate-700 text-4xl mb-6 dark:text-slate-50">RemoDesk fits your needs</div>
+
+            <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto">
+                <div
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto" data-aos="zoom-in">
+                    <i class="fa-solid fa-house text-5xl text-red-400"></i>
+                    <span class="text-3xl text-red-500">Runs in Cloud or On-Premises</span>
+                    <span class="text-slate-600 dark:text-slate-50">Choose our cloud solution to benefit from our infrastructure and service or install on your own servers and work completely independently.</span>
+                    <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
+                </div>
+
+                <div
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto" data-aos="zoom-in">
+                    <i class="fa-solid fa-handshake-angle text-5xl text-red-400"></i>
+                    <span class="text-3xl text-red-500">Full mobile support</span>
+                    <span class="text-slate-600 dark:text-slate-50">Access and control desktops, servers, machines, and devices via smartphone or tablet.
+                        Cross-compatible and platform independent.</span>
+                    <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
+                </div>
+
+                <div
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto" data-aos="zoom-in">
+                    <i class="fa-solid fa-pen-nib text-5xl text-red-400"></i>
+                    <span class="text-3xl text-red-500">Flexibility & customization</span>
+                    <span class="text-slate-600 dark:text-slate-50">Create your own version of AnyDesk and fit it to your individual needs. Allow a consistent
+                        brand experience for your users.</span>
+                    <span class="underline underline-offset-8 decoration-red-500 text-red-500">Learn More</span>
+                </div>
+            </div>
+        </section>
+        <!-- End Solution -->
+
+        <!-- Start Download -->
+        <section class="py-32 dark:bg-slate-800" id="download">
+            <div class="mb-14 container mx-auto text-center space-y-3 text-slate-700 dark:text-slate-50">
+                <span class="text-4xl">Every operating system, every device</span>
+                <p>RemoDesk runs native clients on all major platforms</p>
+            </div>
+
+            <div class="container grid grid-cols-2 md:grid-cols-6 gap-10 mx-auto">
+                <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
+                    <i class="fa-brands fa-windows text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Window OS</span>
+                </div>
+                <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
+                    <i class="fa-brands fa-apple text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Mac OS</span>
+                </div>
+                <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
+                    <i class="fa-brands fa-android text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Android OS</span>
+                </div>
+                <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
+                    <i class="fa-brands fa-linux text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Linux OS</span>
+                </div>
+                <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
+                    <i class="fa-brands fa-chrome text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Chrome OS</span>
+                </div>
+                <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
+                    <i class="fa-brands fa-raspberry-pi text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
+                    <span class="text-slate-600 dark:text-slate-50">Raspberry-pi OS</span>
+                </div>
+            </div>
+        </section>
+        <!-- End Download -->
+
+        <!-- Start Footer -->
+        <section class="py-6 bg-slate-100 dark:bg-slate-900">
+    
+            <div class="container flex flex-col md:flex-row space-y-2 md:space-y-0 justify-between items-center mx-auto">
+                <div class="flex items-center">
+                    <img src="./icon.png"></img>
+                    <span class="text-red-500 text-xl font-semibold ms-1">RemoDesk</span>
+                </div>
+                
+                <ul class="flex space-x-5 text-slate-600 dark:text-slate-50 text-sm md:text-md cursor-pointer">
+                    <li class="hover:underline hover:underline-offset-8">Privacy and Policy</li>
+                    <li class="hover:underline hover:underline-offset-8">Contact</li>
+                    <li class="hover:underline hover:underline-offset-8">Terms</li>
+                    <li class="hover:underline hover:underline-offset-8">why Love?</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Footer -->
+    </body>
+
+    <!-- npm install waypoints -->
+    <script src="./node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+
+    <!-- npm install --save aos@next -->
+    <script src="./node_modules/aos/dist/aos.js"></script>
+
+    <script>
+        // Start DarkMode
+        const switchBtn = document.getElementById('toggleB')
+
+        const darkTheme = () => {
+            document.documentElement.classList.add('dark')
+            localStorage.setItem('theme', 'dark')
+        }
+
+        const lightTheme = () => {
+            document.documentElement.classList.remove('dark')
+            localStorage.removeItem('theme')
+        }
+
+        // When Switch Changes
+        switchBtn.addEventListener('change', function () {
+            if (this.checked) {
+                darkTheme();
+            } else {
+                lightTheme();
+            }
+        });
+
+        // Start Method
+        if (localStorage.getItem('theme') == 'dark') {
+            darkTheme();
+            switchBtn.setAttribute('checked', true);
+        }
+        // End DarkMode
+
+        // Start Menu
+        const openMenu = document.getElementById('open-menu')
+        const closeMenu = document.getElementById('close-menu')
+        const mobileMenu = document.getElementById('mobile-menu')
+        const goToSection = document.getElementById('goto-section')
+
+        // When Close Menu
+        openMenu.addEventListener('click', function () {
+            mobileMenu.style.left = "0px"
+        });
+
+        // When Close Menu
+        closeMenu.addEventListener('click', function () {
+            mobileMenu.style.left = "-100%"
+        });
+
+        goToSection.addEventListener('click', function () {
+            mobileMenu.style.left = "-100%"
+        });
+
+        // End Menu
+
+        // Start Waypoint
+        const navbar = document.getElementById('navbar');
+        
+        var waypoint = new Waypoint({
+                element: document.getElementById('why'),
+                handler: function (direction) {
+                    if (direction === 'down') {
+                        navbar.classList.add('fixed', 'w-full', 'top-0','animate__fadeInDown');
+                    } else {
+                        navbar.classList.remove('fixed', 'w-full', 'top-0','animate__fadeInDown');
+                    }
+                },
+                offset: '20%'
+        })
+        // End Waypoint
+
+        // AOS Animation
+        AOS.init({
+            duration: 1600,
+        });
+    </script>
+
+</html>
