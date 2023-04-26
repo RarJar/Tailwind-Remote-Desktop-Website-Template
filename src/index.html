@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-
+        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,24 @@
         <link href="/dist/output.css" rel="stylesheet">
 
         <!-- npm install @fortawesome/fontawesome-free -->
-        <link href="/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+        <link href="../node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+
+        <!-- npm install animate.css --save -->
+        <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+
+        <!-- npm install --save aos@next -->
+        <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
 
         <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+                text-decoration: none;
+                list-style: none;
+            }
+
             body::-webkit-scrollbar {
                 display: none;
             }
@@ -39,7 +54,7 @@
 
     <body>
         <!-- Start Navbar -->
-        <nav class="bg-slate-100 dark:bg-slate-700 px-6 md:px-0">
+        <nav class="bg-slate-100 shadow-md dark:bg-slate-700 px-6 md:px-0 z-10 animate__animated" id="navbar">
             <div class="container flex justify-between items-center py-3 mx-auto">
                 <!-- Logo -->
                 <div class="flex">
@@ -48,17 +63,28 @@
                 </div>
 
                 <!-- Menu Items -->
-                <div class="fixed md:static w-full md:w-auto h-screen md:h-auto bg-slate-100 dark:bg-slate-800 dark:md:bg-slate-700 z-10 flex justify-center items-center bottom-0 -left-full md:left-auto duration-300 md:duration-0" id="mobile-menu">
+                <div class="fixed top-0 md:static w-full md:w-auto h-screen md:h-auto bg-slate-100 dark:bg-slate-800 dark:md:bg-slate-700 z-10 flex justify-center items-center bottom-0 -left-full md:left-auto duration-300 md:duration-0" id="mobile-menu">
 
                     <div class="absolute top-3 right-3 md:hidden">
                         <i class="fa fa-xmark text-slate-700 dark:text-slate-50 text-2xl" id="close-menu"></i>
                     </div>
 
-                    <ul class="flex flex-col text-xl md:text-lg md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0 cursor-pointer text-slate-700 dark:text-slate-50">
-                        <li>Home</li>
-                        <li>Why?</li>
-                        <li>Features</li>
-                        <li>Clients</li>
+                    <ul class="flex flex-col text-xl md:text-lg md:flex-row space-x-0 md:space-x-6 space-y-6 md:space-y-0 cursor-pointer text-slate-700 dark:text-slate-50" id="goto-section">
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#why">Why?</a>
+                        </li>
+                        <li>
+                            <a href="#features">Features</a>
+                        </li>
+                        <li>
+                            <a href="#clients">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#download">Download</a>
+                        </li>
                     </ul>
 
                 </div>
@@ -87,7 +113,7 @@
         <!-- End Navbar -->
 
         <!-- Start Home -->
-        <section class="py-40 dark:bg-slate-800">
+        <section class="py-40 dark:bg-slate-800" id="home">
             <div class="container mx-auto text-center space-y-5">
 
                 <span class="text-6xl md:text-9xl font-semibold text-slate-700 dark:text-slate-50">Access.<span class="text-red-500">Now.</span> </span>
@@ -114,10 +140,10 @@
         <!-- End Home -->
 
         <!-- Start Why -->
-        <section class="bg-slate-100 dark:bg-slate-800 py-40">
+        <section class="bg-slate-100 dark:bg-slate-800 py-40" id="why">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
                 <!-- Left -->
-                <div class="flex flex-col justify-center items-center md:justify-start md:items-start">
+                <div class="flex flex-col justify-center items-center md:justify-start md:items-start" data-aos="fade-right">
                     <span class="text-lg text-red-500 font-semibold">Version 7.1 Out Now</span>
 
                     <span
@@ -136,7 +162,7 @@
                 </div>
 
                 <!-- Right -->
-                <div class="flex justify-center md:justify-start lg:justify-end items-center">
+                <div class="flex justify-center md:justify-start lg:justify-end items-center" data-aos="fade-left">
                     <img src="../assets/images/why.jpg" class="rounded-md max-w-xs md:max-w-md">
                 </div>
             </div>
@@ -144,12 +170,12 @@
         <!-- End Why -->
 
         <!-- Start Features -->
-        <section class="py-40 dark:bg-slate-800">
+        <section class="py-40 dark:bg-slate-800" id="features">
             <div class="container grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 mx-auto">
                 <!--Start Left -->
                 <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
                     <!-- card one -->
-                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto">
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-rocket fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Blazing fast</span>
@@ -160,7 +186,7 @@
                     </div>
 
                     <!-- card two -->
-                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto">
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-weight-scale fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Lightweight</span>
@@ -171,7 +197,7 @@
                     </div>
 
                     <!-- three one -->
-                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto">
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-key fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Secure</span>
@@ -182,7 +208,7 @@
                     </div>
 
                     <!-- four one -->
-                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto">
+                    <div class="hover:outline hover:outline-1 hover:outline-red-400 rounded-lg p-6 max-w-sm mx-auto" data-aos="zoom-in">
                         <div class="w-48 flex flex-col justify-center items-center text-center mx-auto space-y-5">
                             <i class="fa-solid fa-computer fa-beat text-4xl text-red-400"></i>
                             <span class="text-3xl text-red-500">Everywhere</span>
@@ -213,8 +239,8 @@
         <!-- End Features -->
 
         <!-- Start Clients -->
-        <section class="py-32 dark:bg-slate-800">
-            <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 mx-auto">
+        <section class="py-32 dark:bg-slate-800" id="clients">
+            <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 mx-auto" data-aos="fade-up">
                 <div class="flex flex-col text-center space-y-2">
                     <span class="text-5xl font-semibold text-red-500">500+ Million</span>
                     <span class="font-semibold text-slate-600 dark:text-slate-50">Downloads</span>
@@ -237,7 +263,7 @@
 
             <div class="container grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto">
                 <div
-                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto" data-aos="zoom-in">
                     <i class="fa-solid fa-house text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Runs in Cloud or On-Premises</span>
                     <span class="text-slate-600 dark:text-slate-50">Choose our cloud solution to benefit from our infrastructure and service or install on your own servers and work completely independently.</span>
@@ -245,7 +271,7 @@
                 </div>
 
                 <div
-                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto" data-aos="zoom-in">
                     <i class="fa-solid fa-handshake-angle text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Full mobile support</span>
                     <span class="text-slate-600 dark:text-slate-50">Access and control desktops, servers, machines, and devices via smartphone or tablet.
@@ -254,7 +280,7 @@
                 </div>
 
                 <div
-                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto">
+                    class="flex flex-col text-center space-y-6 p-5 hover:outline hover:outline-1 hover:outline-red-400 rounded-lg mx-auto w-80 md:w-auto" data-aos="zoom-in">
                     <i class="fa-solid fa-pen-nib text-5xl text-red-400"></i>
                     <span class="text-3xl text-red-500">Flexibility & customization</span>
                     <span class="text-slate-600 dark:text-slate-50">Create your own version of AnyDesk and fit it to your individual needs. Allow a consistent
@@ -266,7 +292,7 @@
         <!-- End Solution -->
 
         <!-- Start Download -->
-        <section class="py-32 dark:bg-slate-800">
+        <section class="py-32 dark:bg-slate-800" id="download">
             <div class="mb-14 container mx-auto text-center space-y-3 text-slate-700 dark:text-slate-50">
                 <span class="text-4xl">Every operating system, every device</span>
                 <p>RemoDesk runs native clients on all major platforms</p>
@@ -274,27 +300,27 @@
 
             <div class="container grid grid-cols-2 md:grid-cols-6 gap-10 mx-auto">
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-windows text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <i class="fa-brands fa-windows text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
                     <span class="text-slate-600 dark:text-slate-50">Window OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-apple text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <i class="fa-brands fa-apple text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
                     <span class="text-slate-600 dark:text-slate-50">Mac OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-android text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <i class="fa-brands fa-android text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
                     <span class="text-slate-600 dark:text-slate-50">Android OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-linux text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <i class="fa-brands fa-linux text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
                     <span class="text-slate-600 dark:text-slate-50">Linux OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-chrome text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <i class="fa-brands fa-chrome text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
                     <span class="text-slate-600 dark:text-slate-50">Chrome OS</span>
                 </div>
                 <div class="flex flex-col justify-center items-center space-y-2 text-slate-700">
-                    <i class="fa-brands fa-raspberry-pi text-4xl md:text-5xl dark:text-slate-50"></i>
+                    <i class="fa-brands fa-raspberry-pi text-4xl md:text-5xl dark:text-slate-50" data-aos="flip-left"></i>
                     <span class="text-slate-600 dark:text-slate-50">Raspberry-pi OS</span>
                 </div>
             </div>
@@ -302,7 +328,8 @@
         <!-- End Download -->
 
         <!-- Start Footer -->
-        <section class="py-6 bg-slate-100 dark:bg-slate-900">        
+        <section class="py-6 bg-slate-100 dark:bg-slate-900">
+    
             <div class="container flex flex-col md:flex-row space-y-2 md:space-y-0 justify-between items-center mx-auto">
                 <div class="flex items-center">
                     <img src="../icon.png"></img>
@@ -318,8 +345,13 @@
             </div>
         </section>
         <!-- End Footer -->
-
     </body>
+
+    <!-- npm install waypoints -->
+    <script src="../node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+
+    <!-- npm install --save aos@next -->
+    <script src="../node_modules/aos/dist/aos.js"></script>
 
     <script>
         // Start DarkMode
@@ -355,6 +387,7 @@
         const openMenu = document.getElementById('open-menu')
         const closeMenu = document.getElementById('close-menu')
         const mobileMenu = document.getElementById('mobile-menu')
+        const goToSection = document.getElementById('goto-section')
 
         // When Close Menu
         openMenu.addEventListener('click', function () {
@@ -366,7 +399,32 @@
             mobileMenu.style.left = "-100%"
         });
 
+        goToSection.addEventListener('click', function () {
+            mobileMenu.style.left = "-100%"
+        });
+
         // End Menu
+
+        // Start Waypoint
+        const navbar = document.getElementById('navbar');
+        
+        var waypoint = new Waypoint({
+                element: document.getElementById('why'),
+                handler: function (direction) {
+                    if (direction === 'down') {
+                        navbar.classList.add('fixed', 'w-full', 'top-0','animate__fadeInDown');
+                    } else {
+                        navbar.classList.remove('fixed', 'w-full', 'top-0','animate__fadeInDown');
+                    }
+                },
+                offset: '20%'
+        })
+        // End Waypoint
+
+        // AOS Animation
+        AOS.init({
+            duration: 1600,
+        });
     </script>
 
 </html>
